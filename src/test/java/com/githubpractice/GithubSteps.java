@@ -1,9 +1,12 @@
 package com.githubpractice;
 
+import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.WebDriverRunner;
 import io.qameta.allure.Attachment;
 import io.qameta.allure.Step;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
@@ -15,6 +18,18 @@ import static io.qameta.allure.Allure.addAttachment;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class GithubSteps {
+
+    // Дополнительные изменения
+
+    @BeforeEach
+    void beforeEach() {
+        Configuration.browserSize = "1400x500";
+    }
+
+    @AfterEach
+    void afterEach() {
+        closeWebDriver();
+    }
 
     @Step("Открываем главную страницу")
     public void openMainPage() {
