@@ -1,4 +1,4 @@
-package com.githubpractide;
+package com.githubpractice;
 
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.logevents.SelenideLogger;

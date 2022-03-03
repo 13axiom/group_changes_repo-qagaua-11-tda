@@ -1,4 +1,4 @@
-package com.githubpractide;
+package com.githubpractice;
 
 import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.*;
@@ -13,7 +13,7 @@ public class FindIssueAnnotatedExampleTest {
             userRepo = "allurereports-hw-qaguru-11-tda",
             issueName = "in_name: кириллица && symbols like '%Iñtërnâtiônàlizætiøn'";
 
-    com.github.GithubSteps steps = new com.github.GithubSteps();
+    com.githubpractice.GithubSteps steps = new com.githubpractice.GithubSteps();
 
     @BeforeEach
     @DisplayName("Preconditions")
@@ -21,7 +21,6 @@ public class FindIssueAnnotatedExampleTest {
         steps.openMainPage();
         steps.clearBrowser();
     }
-
 
     @Test
     @Owner("dimtok")
